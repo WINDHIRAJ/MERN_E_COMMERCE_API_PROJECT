@@ -7,6 +7,9 @@ import cardRouter from './Routes/Cart.js'
 import addressRouter from './Routes/address.js'
 import cors from 'cors'
 import paymentRouter from './Routes/Payment.js'
+import dotenv from 'dotenv'
+
+dotenv.config()
 
 const app = express()
 app.use(bodyParser.json())
@@ -45,7 +48,7 @@ app.use('/api/payment',paymentRouter)
 
 
 mongoose.connect(
-    "mongodb+srv://dhirajgaikwad32569:yN0NW7UgprbOCDJU@cluster0.xqswbco.mongodb.net/",
+  process.env. Mondoburl,
     {
         dbName: "MERN_E_COMMERCE"
     }
